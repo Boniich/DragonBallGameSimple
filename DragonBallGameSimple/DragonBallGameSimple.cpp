@@ -89,6 +89,29 @@ int Goku::kamehameha() {
 	return _attack * _levePower;
 }
 
+class Krillin : public Character, IKamehameha
+{
+public:
+	Krillin(string name, string race, int life,
+		int levelPower, int attack, int defense, int level) : Character(name, race, life, levelPower, attack, defense, level) {};
+	string talk() override;
+	int basickAttack() override;
+	int kamehameha() override;
+
+};
+
+string Krillin::talk() {
+
+	return "Hola! Mi nombre es Krillin";
+}
+
+int Krillin::basickAttack() {
+	return _attack;
+}
+
+int Krillin::kamehameha() {
+	return _attack * _levePower;
+}
 
 
 
@@ -97,11 +120,27 @@ int main()
 	int option = 0;
 	bool exit = false;
 	Goku* goku = new Goku("Goku","Humano",100,200,15,10,50);
+	Krillin* krillin = new Krillin("Krillin", "Humano", 50, 70, 10, 10, 40);
 
 
 
 
 	do {
+
+		switch (option)
+		{
+		case 1:
+			//goku
+			break;
+		case 2: 
+			//krillin
+			break;
+		case 0:
+			//salir;
+		default:
+			//La opcion no es valida
+			break;
+		}
 
 		
 		cout << "1- Informacion de goku" << endl;
@@ -146,6 +185,9 @@ int main()
 
 	} while (!exit);
 
+
+	delete goku;
+	delete krillin;
 
 
 }
