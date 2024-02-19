@@ -27,8 +27,6 @@ public:
 	//	no queremos que tenga ningun contenido de inicio
 	virtual string talk() = 0;
 	virtual int basickAttack() = 0;
-
-protected:
 	string showDataCharacter();
 };
 
@@ -63,7 +61,6 @@ class Goku : public Character, IKamehameha
 public:
 	Goku(string name, string race, int life,
 		int levelPower, int attack, int defense, int level);
-	string showGokuData();
 	string talk() override;
 	int basickAttack() override;
 	string kaioken();
@@ -74,10 +71,6 @@ Goku::Goku(string name, string race, int life,
 	int levelPower, int attack, int defense, int level)
 	: Character(name, race, life, levelPower, attack, defense, level) {};
 
-
-string Goku::showGokuData() {
-	return showDataCharacter();
-}
 
 string Goku::kaioken() {
 	return "Kaiokeeen";
@@ -95,7 +88,6 @@ int Goku::basickAttack() {
 int Goku::kamehameha() {
 	return _attack * _levePower;
 }
-
 
 
 
@@ -129,7 +121,7 @@ int main()
 		{
 		case 1:
 			cout << "Los datos de goku son: " << endl;
-			cout << goku->showGokuData() << endl;
+			cout << goku->showDataCharacter() << endl;
 			break;
 		case 2:
 			cout << goku->talk() << endl;;
