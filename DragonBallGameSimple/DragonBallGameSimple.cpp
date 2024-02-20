@@ -1,125 +1,9 @@
 #include <iostream>
 #include <string>
+#include "../../Classes/DerivedClasses/Goku.h"
+#include "../../Classes/DerivedClasses/Krillin.h"
 
 using namespace std;
-
-
-class IKamehameha
-{
-public:
-	virtual int kamehameha() = 0;
-};
-
-
-class Character {
-protected:
-	string _name;
-	string _race;
-	int _life;
-	int _levePower;
-	int _attack;
-	int _defense;
-	int _level;
-public:
-	Character(string name, string race, int life, int levelPower,
-		int attack, int defense, int level);
-	//Al agregar el 0, lo que hacemos es evitar tener que definir la funcion a sobreescribir cuando
-	//	no queremos que tenga ningun contenido de inicio
-	virtual string talk() = 0;
-	virtual int basickAttack() = 0;
-	string showDataCharacter();
-};
-
-Character::Character(string name, string race, int life, int levelPower,
-	int attack, int defense, int level) {
-
-	_name = name;
-	_race = race;
-	_life = life;
-	_levePower = levelPower;
-	_attack = attack;
-	_defense = defense;
-	_level = level;
-}
-
-string Character::showDataCharacter() {
-
-	string data = "El nombre es: " + _name + "\n" +
-		"La raza es: " + _race + "\n" +
-		"Vida: " + to_string(_life) + "\n"
-		"Poder de pelea: " + to_string(_levePower) + "\n"
-		"Ataque: " + to_string(_attack) + "\n"
-		"Defensa: " + to_string(_defense) + "\n"
-		"Nivel: " + to_string(_level) + "\n";
-
-	return data;
-}
-
-class Goku : public Character, IKamehameha
-{
-
-public:
-	Goku(string name, string race, int life,
-		int levelPower, int attack, int defense, int level);
-	string talk() override;
-	int basickAttack() override;
-	string kaioken();
-	int kamehameha() override;
-};
-
-Goku::Goku(string name, string race, int life,
-	int levelPower, int attack, int defense, int level)
-	: Character(name, race, life, levelPower, attack, defense, level) {};
-
-
-string Goku::kaioken() {
-	return "Kaiokeeen";
-}
-
-string Goku::talk() {
-
-	return "Hola! Mi nombre es Goku";
-}
-
-int Goku::basickAttack() {
-	return _attack;
-}
-
-int Goku::kamehameha() {
-	int techniqueAttack = 80;
-	return _attack + techniqueAttack + _levePower;
-}
-
-class Krillin : public Character, IKamehameha
-{
-public:
-	Krillin(string name, string race, int life,
-		int levelPower, int attack, int defense, int level) : Character(name, race, life, levelPower, attack, defense, level) {};
-	string talk() override;
-	int basickAttack() override;
-	int kamehameha() override;
-	int kienzan();
-
-};
-
-string Krillin::talk() {
-
-	return "Hola! Mi nombre es Krillin";
-}
-
-int Krillin::basickAttack() {
-	return _attack;
-}
-
-int Krillin::kamehameha() {
-	int techniqueAttack = 50;
-	return _attack + techniqueAttack + _levePower;
-}
-
-int Krillin::kienzan() {
-	int tecnicAttack = 70;
-	return _attack + tecnicAttack + _levePower;
-}
 
 void pickGoku() {
 
@@ -174,7 +58,7 @@ void pickGoku() {
 	
 	delete goku;
 }
-
+//
 void pickKrillin() {
 	bool comeback = false;
 	int option = 0;
