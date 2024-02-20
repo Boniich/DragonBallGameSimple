@@ -128,16 +128,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Classes\Character.cpp" />
+    <ClCompile Include="Classes\DerivedClasses\Gohan.cpp" />
     <ClCompile Include="Classes\DerivedClasses\Goku.cpp" />
     <ClCompile Include="Classes\DerivedClasses\Krillin.cpp" />
+    <ClCompile Include="Classes\DerivedClasses\Piccolo.cpp" />
     <ClCompile Include="DragonBallGameSimple.cpp" />
     <ClCompile Include="Interfaces\IKamehameha.h" />
     <ClCompile Include="Views\View.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Classes\Character.h" />
+    <ClInclude Include="Classes\DerivedClasses\Gohan.h" />
     <ClInclude Include="Classes\DerivedClasses\Goku.h" />
     <ClInclude Include="Classes\DerivedClasses\Krillin.h" />
+    <ClInclude Include="Classes\DerivedClasses\Piccolo.h" />
+    <ClInclude Include="Interfaces\IMakankosappo.h" />
     <ClInclude Include="Views\View.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
