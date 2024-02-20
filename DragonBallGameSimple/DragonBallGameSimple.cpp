@@ -86,7 +86,8 @@ int Goku::basickAttack() {
 }
 
 int Goku::kamehameha() {
-	return _attack * _levePower;
+	int techniqueAttack = 80;
+	return _attack + techniqueAttack + _levePower;
 }
 
 class Krillin : public Character, IKamehameha
@@ -111,13 +112,13 @@ int Krillin::basickAttack() {
 }
 
 int Krillin::kamehameha() {
-	double techniqueAttack = 2;
-	return _attack * _levePower * techniqueAttack;
+	int techniqueAttack = 50;
+	return _attack + techniqueAttack + _levePower;
 }
 
 int Krillin::kienzan() {
-	double tecnicAttack = 1.5;
-	return _attack * tecnicAttack * _levePower;
+	int tecnicAttack = 70;
+	return _attack + tecnicAttack + _levePower;
 }
 
 void pickGoku() {
