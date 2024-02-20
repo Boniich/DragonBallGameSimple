@@ -127,7 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Classes\Character.cpp" />
+    <ClCompile Include="Classes\DerivedClasses\Goku.cpp" />
+    <ClCompile Include="Classes\DerivedClasses\Krillin.cpp" />
     <ClCompile Include="DragonBallGameSimple.cpp" />
+    <ClCompile Include="Interfaces\IKamehameha.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Classes\Character.h" />
+    <ClInclude Include="Classes\DerivedClasses\Goku.h" />
+    <ClInclude Include="Classes\DerivedClasses\Krillin.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
