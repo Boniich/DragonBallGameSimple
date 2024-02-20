@@ -1,4 +1,2 @@
 ﻿  DragonBallGameSimple.cpp
-E:\C++\Proyects\DragonBallGameSimple\DragonBallGameSimple\DragonBallGameSimple.cpp(115,30): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
-E:\C++\Proyects\DragonBallGameSimple\DragonBallGameSimple\DragonBallGameSimple.cpp(120,32): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
   DragonBallGameSimple.vcxproj -> E:\C++\Proyects\DragonBallGameSimple\x64\Debug\DragonBallGameSimple.exe
